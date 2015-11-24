@@ -39,3 +39,8 @@ body {
 #mainContent {
   border: solid grey 1px;
 }
+
+.checkbox {
+  float: left
+  clear: left;
+  ;}
