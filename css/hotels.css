@@ -35,3 +35,7 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+#mainContent {
+  border: solid grey 1px;
+}
