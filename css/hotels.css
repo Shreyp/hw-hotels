@@ -44,3 +44,12 @@ body {
   float: left
   clear: left;
   ;}
+
+  /*Search Field Styling
+-------------------------------------------------- */
+
+#searchFields {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 50px;
+}
