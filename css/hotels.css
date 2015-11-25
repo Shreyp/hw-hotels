@@ -53,8 +53,14 @@ body {
   padding-bottom: 20px;
 }
 
+<<<<<<< HEAD
   /*Jumbotron Styling
 -------------------------------------------------- */
 #jumbotron {
   padding-bottom: 300px;
 }
+=======
+.leftSideBar {
+  text-align: left;
+}
+>>>>>>> 62d00de1baff099b6894abb45a0f1733ef87681d
