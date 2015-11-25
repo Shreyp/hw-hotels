@@ -58,7 +58,19 @@ body {
     border-top: solid grey 1px;
   }
   #resultsSection {
-    margin-top: 20px;
+    margin-top: 5px;
+    text-align: left;
+  }
+  .chooseHotel {
+    margin-top: -15px;
+  }
+  .hotelThumbnail {
+    width: 144px;
+  }
+  .resultItem {
+    padding: 10px;
+    margin-top: -35px;
+    margin-bottom: -20px;
   }
 
   /*Search Field Styling
