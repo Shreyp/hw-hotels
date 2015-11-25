@@ -40,16 +40,44 @@
       <!--Search Fields Start-->
         <form class="form-inline" id="searchFields">
           <div class ="form-group">
-            <input type ="text" class="form-control" id="hotelLocation">
-            <input type ="text" class="form-control" id="startDate">
-            <input type ="text" class="form-control" id="endDate">
-            <input type ="dropdown" class="form-control" id="numGuests">
+            <input type ="text" class="form-control" id="hotelLocation" placeholder="Where are you going?">
+            <input type ="text" class="form-control" id="startDate" placeholder="Check-in Date">
+            <input type ="text" class="form-control" id="endDate" placeholder="Check-out Date">
+              <div class="btn-group btn-input clearfix">
+                <button type="button" class="btn btn-secondary dropdown-toggle form-control" data-toggle="dropdown">
+                  <span data-bind="label">Number of Rooms</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">1 Room</a></li>
+                  <li><a href="#">2 Rooms</a></li>
+                  <li><a href="#">3 Rooms</a></li>
+                  <li><a href="#">4 Rooms</a></li>
+                  <li><a href="#">5 Rooms</a></li>
+                  <li><a href="#">6 Rooms</a></li>
+                  <li><a href="#">7 Rooms</a></li>
+                  <li><a href="#">8 Rooms</a></li>
+                  <li><a href="#">9 Rooms</a></li>
+                  <li><a href="#">10+ Rooms</a></li>
+                </ul>
+              </div>
           </div>
-          <button type="submit" class="btn btn-primary" id="searchBtn">Search</button>
+          <button type="submit" class="btn btn-success" id="searchBtn">Search</button>
         </form>
       <!--Search Fields End-->
       </div>
       <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-4">
+        <a class="glyphicon glyphicon-triangle-bottom" role="button" data-toggle="collapse" href="#advancedSearch" aria-expanded="false" aria-controls="advancedSearch">Advanced Search</a>
+        <div class="collapse" id="advancedSearch">
+          <div class="well">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5"></div>
+    </div>
     </div>
     <div class="row" id="jumbotron">
       <div class="col-md-3"></div>
@@ -91,7 +119,6 @@
                   Miami
                 </div>
               </div>
-              ...
             </div>
             <!-- Controls -->
             <a class="left carousel-control" href="#hotels-carousel" role="button" data-slide="prev">
