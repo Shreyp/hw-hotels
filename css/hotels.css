@@ -44,6 +44,23 @@ body {
   float: left
   clear: left;
   ;}
+  #criteria {
+    padding: 10px;
+    border-bottom: solid grey 1px;
+    margin-bottom: 10px;
+  }
+  #localCriteria, #dateCriteria {
+    border-right: solid grey 1px;
+    margin-bottom: 10px;
+  }
+  #sortByCriteria {
+    padding-top: 10px;
+    margin-bottom: -100px;
+    border-top: solid grey 1px;
+  }
+  #resultsSection {
+    margin-top: 20px;
+  }
 
   /*Search Field Styling
 -------------------------------------------------- */
