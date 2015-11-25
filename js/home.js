@@ -5,5 +5,4 @@ $(document).ready(function() {
     $("#endDate").Zebra_DatePicker({
     format: "m/d/y"
   });
-    $("startDate").attr("placeholder",Date());
 });
