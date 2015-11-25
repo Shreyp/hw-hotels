@@ -5,6 +5,8 @@
   <title>Search Hotels!</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/flatly/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/hotels.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/iThing-min.css">
 </head>
 
 <body>
@@ -117,6 +119,28 @@
               <strong>
           Price
         </strong>
+              <p>
+                <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+              </p>
+              <div id="slider-range"></div>
+              <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+                Free Breakfast &nbsp; &nbsp; $40
+                </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+                Free Cancelation $35
+                </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="">
+                Free Internet &nbsp; &nbsp; &nbsp; &nbsp; $35
+                </label>
+            </div>
             </div>
         </div>
         <div class="col-md-8" id="mainContent">
@@ -181,6 +205,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/priceSlider.js"></script>
 </body>
 
 </html>
