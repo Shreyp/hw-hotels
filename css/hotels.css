@@ -53,7 +53,13 @@ body {
   padding-bottom: 20px;
 }
 
+<<<<<<< HEAD
+  /*Jumbotron Styling
+-------------------------------------------------- */
+#jumbotron {
+  padding-bottom: 300px;
+}
+=======
 .leftSideBar {
   text-align: left;
 }
-
