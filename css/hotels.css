@@ -49,13 +49,12 @@ body {
     border-bottom: solid grey 1px;
     margin-bottom: 10px;
   }
-  #localCriteria, #dateCriteria {
-    border-right: solid grey 1px;
-    margin-bottom: 10px;
+  #dateLocal {
+    margin-bottom: 20px;
   }
   #sortByCriteria {
+    margin-top: 10px;
     padding-top: 10px;
-    margin-bottom: -100px;
     border-top: solid grey 1px;
   }
   #resultsSection {
