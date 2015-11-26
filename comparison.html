@@ -46,7 +46,7 @@
             </p>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="">
+                <input type="checkbox" value="" checked>
                 <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
@@ -54,7 +54,7 @@
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="">
+                <input type="checkbox" value="" checked>
                 <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
@@ -62,7 +62,7 @@
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="">
+                <input type="checkbox" value="" checked>
                 <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star-empty"></span>
@@ -70,7 +70,7 @@
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="">
+                <input type="checkbox" value="" checked>
                 <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star-empty"></span>
                 <span class="glyphicon glyphicon-star-empty"></span>
@@ -78,7 +78,7 @@
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="">
+                <input type="checkbox" value="" checked>
                 <span class="glyphicon glyphicon-star-empty"></span><span class="glyphicon glyphicon-star-empty"></span>
                 <span class="glyphicon glyphicon-star-empty"></span>
                 <span class="glyphicon glyphicon-star-empty"></span>
@@ -94,23 +94,23 @@
             </p>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value=""> Excellent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$35</label>
+                <input type="checkbox" value="" checked> Excellent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$35</label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value=""> Good &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$10</label>
+                <input type="checkbox" value="" checked> Good &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$10</label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value=""> Okay &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$34</label>
+                <input type="checkbox" value="" checked> Okay &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$34</label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="">Mediocre &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$84</label>
+                <input type="checkbox" value="" checked>Mediocre &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$84</label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value=""> Poor &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;info</label>
+                <input type="checkbox" value="" checked> Poor &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;info</label>
             </div>
           </div>
           <hr />
@@ -161,15 +161,13 @@
               </div>
               <br />
               <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Location
+                <button class="btn btn-primary dropdown-toggle currentLocation" type="button" data-toggle="dropdown">Location
                   <span class="caret"></span></button>
                 <ul class="dropdown-menu">
-                  <li><a href="#">5</a></li>
-                  <li><a href="#">10</a></li>
-                  <li><a href="#">15</a></li>
-                  <li><a href="#">20</a></li>
-                  <li><a href="#">25</a></li>
-                  <li><a href="#">30</a></li>
+                  <li><a href="#" id="setLocalNY">New York</a></li>
+                  <li><a href="#" id="setLocalWA">Washington, DC</a></li>
+                  <li><a href="#" id="setLocalTX">Texas</a></li>
+                  <li><a href="#" id="setLocalChi">Chicago</a></li>
                 </ul>
               </div>
               <div class="checkbox">
@@ -258,10 +256,10 @@
 
         </div>
         <div class="col-md-8" id="mainContent">
-          <div class="container-fluid" id ="criteria">
+          <div class="container-fluid" id="criteria">
             <div class="row" id="dateLocal">
               <div class="col-md-3" id="localCriteria">
-                <p>All Locations</p>
+                <p><span class="currentLocation">All Locations</span></p>
               </div>
               <div class="col-md-3" id="dateCriteria">
                 <p>Nov 26 &nbsp; <span class="glyphicon glyphicon-arrow-right"></span> &nbsp; Nov 27</p>
@@ -273,397 +271,398 @@
 
             <div class="row" id="sortByCriteria">
               <div class="col-md-12">
-                <p><span>Reccomended</span> &nbsp; -  &nbsp; <span>Price</span> &nbsp; - &nbsp; <span>Stars</span> &nbsp; - &nbsp; <span>Review Score</span> &nbsp; - &nbsp; <span>Distance From Downtown</span></p>
+                <p><span>Reccomended</span> &nbsp; - &nbsp; <span>Price</span> &nbsp; - &nbsp; <span>Stars</span> &nbsp; - &nbsp; <span>Review Score</span> &nbsp; - &nbsp; <span>Distance From Downtown</span></p>
               </div>
             </div>
           </div>
 
           <div class="container-fluid" id="resultsSection">
-            <div class="row">
+
+            <div class="row NY 4star Go">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/starwoodHotels.png">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Starwood Hotels of New York</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                    <small><strong>Good (8.0,</strong> 3,231 reviews)</small></p>
-                    <p>Exclusive Savings of up to 20% off at Sheraton,...</p>
-                    <p>Sheraton Tribeca New York, NY... &nbsp; <a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.hotwire.com/">Hotwire</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$114</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
-                    </div>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
-            <!--resultItem-->
-
-               <div class="row">
-              <div class="col-md-12">
-                <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/avenueHotels.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Avenue Hotels of New York</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                 <span class="glyphicon glyphicon-star"></span>
-                    <small><strong>Excellent (9.1,</strong> 2,231 reviews)</small></p>
-                    <p>Book three nights and get the fourth free!...</p>
-                    <p>4624 13th Ave New York, NY... &nbsp; <a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.expedia.com/">Expedia</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$162</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
-                    </div>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
-            <!--resultItem-->
-
                   <div class="row">
-              <div class="col-md-12">
-                <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/doubleTreeHotels.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Double Tree Hotels of New York</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                    <small><strong>Okay (7.4,</strong> 1,225 reviews)</small></p>
-                    <p>Hip lodging with upscale rooms & a free wine...</p>
-                    <p>70 Park Ave Ave New York, NY... &nbsp; <a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.booking.com/">Booking.com</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$80</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/starwoodHotels.png">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Starwood Hotels of New York</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <small><strong>Good (8.0,</strong> 3,231 reviews)</small></p>
+                      <p>Exclusive Savings of up to 20% off at Sheraton,...</p>
+                      <p>Sheraton Tribeca New York, NY... &nbsp; <a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.hotwire.com/">Hotwire</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$114</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-                       <div class="row">
+            <div class="row NY 5star Ex">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/milleniumBroadway.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Millenium Broadway Hotels of New York</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-               <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                    <small><strong>Mediocre (6.0,</strong> 3,322 reviews)</small></p>
-                    <p>Unpretentious option offering traditional room...</p>
-                    <p>485 5th Ave New York, NY... &nbsp; <a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.orbitz.com/">Orbitz</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$91</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/avenueHotels.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Avenue Hotels of New York</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <small><strong>Excellent (9.1,</strong> 2,231 reviews)</small></p>
+                      <p>Book three nights and get the fourth free!...</p>
+                      <p>4624 13th Ave New York, NY... &nbsp; <a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.expedia.com/">Expedia</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$162</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-                <div class="row">
+            <div class="row NY 3star Ok">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/newYorkMidtown.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>New York Midtown Hotels of New York</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                    <small><strong>Excellent (9.2,</strong> 1,892 reviews)</small></p>
-                    <p>Grand corner hotel tower with understated dec...</p>
-                    <p>400 5th Ave New York, NY... &nbsp; <a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.kayak.com/">Kayak</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$184</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/doubleTreeHotels.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Double Tree Hotels of New York</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <small><strong>Okay (7.4,</strong> 1,225 reviews)</small></p>
+                      <p>Hip lodging with upscale rooms & a free wine...</p>
+                      <p>70 Park Ave Ave New York, NY... &nbsp; <a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.booking.com/">Booking.com</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$80</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-             <div class="row">
+            <div class="row NY 2star Me">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/parkCentralNewYork.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Park Central Hotels of New York</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                    <small><strong>Poor (5.7,</strong> 692 reviews)</small></p>
-                    <p>Straightforward business hotel with an indoor p...</p>
-                    <p>870 7th Ave, New York, NY... &nbsp; <a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.booking.com/">Booking.com</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$55</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/milleniumBroadway.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Millenium Broadway Hotels of New York</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <small><strong>Mediocre (6.0,</strong> 3,322 reviews)</small></p>
+                      <p>Unpretentious option offering traditional room...</p>
+                      <p>485 5th Ave New York, NY... &nbsp; <a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.orbitz.com/">Orbitz</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$91</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-                 <div class="row">
+            <div class="row NY 5star Ex">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/beaconHotelCorporateQuarterWashingtonDC.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Beacon Hotel of Washington, DC</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                    <small><strong>Excellent (9.6,</strong> 6,109 reviews)</small></p>
-                    <p>Rooms & suites in an iconic 1925 venue with a l...</p>
-                    <p>515 15th St NW Washington, DC... &nbsp; <a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.kayak.com/">Kayak</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$171</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/newYorkMidtown.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>New York Midtown Hotels of New York</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <small><strong>Excellent (9.2,</strong> 1,892 reviews)</small></p>
+                      <p>Grand corner hotel tower with understated dec...</p>
+                      <p>400 5th Ave New York, NY... &nbsp; <a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.kayak.com/">Kayak</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$184</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-                   <div class="row">
+            <div class="row NY 2star Po">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/capitolSkylineWaDc.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Capitol Skyline Hotel of Washington, DC</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                    <small><strong>Mediocre (6.2,</strong> 443 reviews)</small></p>
-                    <p>Contemporary complex with sleek rooms, conf...</p>
-                    <p>1919 Connecticut Ave NW Washington,... &nbsp; <a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.expeidia.com/">Expedia</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$69</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/parkCentralNewYork.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Park Central Hotels of New York</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <small><strong>Poor (5.7,</strong> 692 reviews)</small></p>
+                      <p>Straightforward business hotel with an indoor p...</p>
+                      <p>870 7th Ave, New York, NY... &nbsp; <a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.booking.com/">Booking.com</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$55</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-                         <div class="row">
+            <div class="row WA 5star Ex">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/henleyParkHotelWaDc.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Henley Park Hotel of Washington, DC</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                    <small><strong>Okay (7.0,</strong> 2333 reviews)</small></p>
-                    <p>Refined rooms & suites in an upscale 1920s ve...</p>
-                    <p>1143 New Hampshire Ave NW Washi...&nbsp;<a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.hotels.com/">Hotels.com</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$120</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/beaconHotelCorporateQuarterWashingtonDC.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Beacon Hotel of Washington, DC</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <small><strong>Excellent (9.6,</strong> 6,109 reviews)</small></p>
+                      <p>Rooms & suites in an iconic 1925 venue with a l...</p>
+                      <p>515 15th St NW Washington, DC... &nbsp; <a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.kayak.com/">Kayak</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$171</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-                       <div class="row">
+            <div class="row WA 2star Me">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/washingtonPlaza.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>Washington Plaza Hotel of Washington, DC</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                    <small><strong>Okay (7.8,</strong> 3523 reviews)</small></p>
-                    <p>Upscale lodging with restaurants, a full-service s...</p>
-                    <p>525 New Jersey Ave NW Washin...&nbsp;<a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.hotels.com/">Hotels.com</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$89</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/capitolSkylineWaDc.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Capitol Skyline Hotel of Washington, DC</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <small><strong>Mediocre (6.2,</strong> 443 reviews)</small></p>
+                      <p>Contemporary complex with sleek rooms, conf...</p>
+                      <p>1919 Connecticut Ave NW Washington,... &nbsp; <a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.expeidia.com/">Expedia</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$69</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-                   <div class="row">
+            <div class="row WA 3star Ok">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/theChurchhillHotel.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>The Churchhill Hotel of Washington, DC</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                    <small><strong>Good (8.6,</strong> 907 reviews)</small></p>
-                    <p>Sleek rooms & suites offering 24-hour room ser...</p>
-                    <p>999 9th St NW Washington, DC...&nbsp;<a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.priceline.com/">Priceline</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$155</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/henleyParkHotelWaDc.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Henley Park Hotel of Washington, DC</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <small><strong>Okay (7.0,</strong> 2333 reviews)</small></p>
+                      <p>Refined rooms & suites in an upscale 1920s ve...</p>
+                      <p>1143 New Hampshire Ave NW Washi...&nbsp;<a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.hotels.com/">Hotels.com</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$120</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-             <div class="row">
+            <div class="row WA 3star Ok">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/hiltonDallasLincolnCentre.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>The Dallas Lincoln Centre Hotel of Dallas, TX</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                    <small><strong>Excellent (9.6,</strong> 2907 reviews)</small></p>
-                    <p>Sophisticated rooms & suites, plus high-end dini...</p>
-                    <p>1717 N Akard St Dallas, TX...&nbsp;<a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.kayak.com/">Kayak</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$185</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/washingtonPlaza.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>Washington Plaza Hotel of Washington, DC</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <small><strong>Okay (7.8,</strong> 3523 reviews)</small></p>
+                      <p>Upscale lodging with restaurants, a full-service s...</p>
+                      <p>525 New Jersey Ave NW Washin...&nbsp;<a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.hotels.com/">Hotels.com</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$89</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </div>
               </div>
             </div>
             <!--resultItem-->
 
-            <div class="row">
+            <div class="row WA 4star Go">
               <div class="col-md-12">
                 <div class="container-fluid resultItem">
-                <div class="row">
-                  <div class="col-md-4">
-                    <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/hyattRegencyDallas.jpg">
-                  </div>
-                  <div class="col-md-6">
-                    <h4>The Hyatt Regency Hotel of Dallas, TX</h4>
-                    <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                <span class="glyphicon glyphicon-star-empty"></span>
-                    <small><strong>Okay (7.9,</strong> 2907 reviews)</small></p>
-                    <p>Convention hotel with restaurants, an outdoor p...</p>
-                    <p>400 Crescent Ct Dallas, TX...&nbsp;<a href="#">Select</a></p>
-                <p><small>Via <a href="https://www.hotels.com/">Hotels.com</a></small></p>
-                  </div>
-                  <div class="col-md-2">
-                    <div class="chooseHotel">
-                    <h3><strong>$125</strong></h3>
-                    <button type="button" class="btn btn-primary">Select</button>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/theChurchhillHotel.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>The Churchhill Hotel of Washington, DC</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <small><strong>Good (8.6,</strong> 907 reviews)</small></p>
+                      <p>Sleek rooms & suites offering 24-hour room ser...</p>
+                      <p>999 9th St NW Washington, DC...&nbsp;<a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.priceline.com/">Priceline</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$155</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <!--resultItem-->
+
+            <div class="row TX 5star Ex">
+              <div class="col-md-12">
+                <div class="container-fluid resultItem">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/hiltonDallasLincolnCentre.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>The Dallas Lincoln Centre Hotel of Dallas, TX</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <small><strong>Excellent (9.6,</strong> 2907 reviews)</small></p>
+                      <p>Sophisticated rooms & suites, plus high-end dini...</p>
+                      <p>1717 N Akard St Dallas, TX...&nbsp;<a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.kayak.com/">Kayak</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$185</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--resultItem-->
+
+            <div class="row TX 3star Ok">
+              <div class="col-md-12">
+                <div class="container-fluid resultItem">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img class="img-responsive hotelThumbnail" src="img/comparisonPage/hotelThumbnails/hyattRegencyDallas.jpg">
+                    </div>
+                    <div class="col-md-6">
+                      <h4>The Hyatt Regency Hotel of Dallas, TX</h4>
+                      <p><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                        <small><strong>Okay (7.9,</strong> 2907 reviews)</small></p>
+                      <p>Convention hotel with restaurants, an outdoor p...</p>
+                      <p>400 Crescent Ct Dallas, TX...&nbsp;<a href="#">Select</a></p>
+                      <p><small>Via <a href="https://www.hotels.com/">Hotels.com</a></small></p>
+                    </div>
+                    <div class="col-md-2">
+                      <div class="chooseHotel">
+                        <h3><strong>$125</strong></h3>
+                        <button type="button" class="btn btn-primary">Select</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -728,6 +727,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/priceSlider.js"></script>
+  <script type="text/javascript" src="js/locationSetter.js"></script>
 </body>
 
 </html>
