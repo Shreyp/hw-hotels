@@ -11,3 +11,4 @@ $(document).ready(function(){
     $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
       " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 });
+var values = $( ".selector" ).slider( "option", "values" );
