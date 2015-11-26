@@ -2,8 +2,8 @@ $(document).ready(function(){
    $( "#slider-range" ).slider({
       range: true,
       min: 35,
-      max: 2350,
-      values: [ 35, 354 ],
+      max: 200,
+      values: [ 35, 200 ],
       slide: function( event, ui ) {
         $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
       }
