@@ -5,10 +5,9 @@ $(document).ready(function() {
   $('#5starCheckbox').click(function() {
 
     if ($("#5starCheckbox").is(":checked")) {
-
       $(pageObject.location).each(function() {
         if ($(this).hasClass('star5')){
-        $(this).css('display', 'block');
+        $(this).fadeIn('500');
         pageObject.stars[5] = true;
         }
       });
@@ -16,7 +15,7 @@ $(document).ready(function() {
     } else {
       $(pageObject.location).each(function() {
         if ($(this).hasClass('star5')){
-        $(this).css('display', 'none');
+        $(this).fadeOut('500');
         pageObject.stars[5] = false;
         }
       });
@@ -31,7 +30,7 @@ $(document).ready(function() {
 
       $(pageObject.location).each(function() {
         if ($(this).hasClass('star4')){
-        $(this).css('display', 'block');
+        $(this).fadeIn('500');
         pageObject.stars[4] = true;
         }
       });
@@ -39,7 +38,7 @@ $(document).ready(function() {
     } else {
       $(pageObject.location).each(function() {
         if ($(this).hasClass('star4')){
-        $(this).css('display', 'none');
+        $(this).fadeOut('500');
         pageObject.stars[4] = false;
         }
       });
@@ -54,7 +53,7 @@ $(document).ready(function() {
 
       $(pageObject.location).each(function() {
         if ($(this).hasClass('star3')){
-        $(this).css('display', 'block');
+        $(this).fadeIn('500');
         pageObject.stars[3] = true;
         }
       });
@@ -62,7 +61,7 @@ $(document).ready(function() {
     } else {
       $(pageObject.location).each(function() {
         if ($(this).hasClass('star3')){
-        $(this).css('display', 'none');
+        $(this).fadeOut('500');
         pageObject.stars[3] = false;
         }
       });
@@ -77,7 +76,7 @@ $(document).ready(function() {
 
       $(pageObject.location).each(function() {
         if ($(this).hasClass('star2')){
-        $(this).css('display', 'block');
+        $(this).fadeIn('500');
         pageObject.stars[2] = true;
         }
       });
@@ -85,7 +84,7 @@ $(document).ready(function() {
     } else {
       $(pageObject.location).each(function() {
         if ($(this).hasClass('star2')){
-        $(this).css('display', 'none');
+        $(this).fadeOut('500');
         pageObject.stars[2] = false;
         }
       });

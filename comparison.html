@@ -9,29 +9,28 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="home.html">RCB Travel</a>
+      <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="home.html">RCB Travel</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="comparison.html">Hotels</a></li>
+            <li><a href="#about">Flights</a></li>
+            <li><a href="#contact">Cars</a></li>
+            <li><a href="#contact">Packages</a></li>
+            <li><a href="#contact">Trips &nbsp;<img id="suitcase" src="img/suitcase.png" class="img-responsive"></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="comparison.html">Hotels</a></li>
-          <li><a href="#about">Flights</a></li>
-          <li><a href="#contact">Cars</a></li>
-          <li><a href="#contact">Packages</a></li>
-          <li><a href="#contact">Trips</a></li>
-        </ul>
-      </div>
-      <!--/.nav-collapse -->
-    </div>
-  </nav>
+    </nav>
 
   <div class="container" id="wrapper">
     <div class="container-fluid">
@@ -101,23 +100,23 @@
             </p>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="" checked> Excellent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$35</label>
+                <input type="checkbox" id="ExCheckbox" value="" checked> Excellent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$35</label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="" checked> Good &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$10</label>
+                <input type="checkbox" id="GoCheckbox" value="" checked> Good &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$10</label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="" checked> Okay &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$34</label>
+                <input type="checkbox" id="OkCheckbox" value="" checked> Okay &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$34</label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="" checked>Mediocre &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$84</label>
+                <input type="checkbox" id="MeCheckbox" value="" checked>Mediocre &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$84</label>
             </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox" value="" checked> Poor &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;info</label>
+                <input type="checkbox" id="PoCheckbox" value="" checked> Poor &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;info</label>
             </div>
           </div>
           <hr />
@@ -1254,6 +1253,8 @@
   <script type="text/javascript" src="js/locationSetter.js"></script>
   <script type="text/javascript" src="js/starCheckbox.js"></script>
   <script type="text/javascript" src="js/globalVars.js"></script>
+  <script type="text/javascript" src="js/reviewSort.js"></script>
+  <script type="text/javascript" src="js/pageDelegator.js"></script>
 </body>
 
 </html>
