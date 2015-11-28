@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+   $(pageObject.location).each(function() {
+    visibleItems.push($(this));
+     });
+
   $("#setLocalNY").click(function(event) {
     event.preventDefault();
     $(".currentLocation").text("New York, NY");
@@ -6,7 +11,7 @@ $(document).ready(function() {
 
     $(".NY").each(function(index) {
       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
+      $(this).css('display', 'block');
     }
     if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
       $(this).css("display", "block");
