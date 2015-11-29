@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
-  $(".btn-danger").on("click", function() {
-    $(this).parent().parent().parent().parent().parent().parent().parent().remove();
-    });
+  $(".delete-hotel").on("click", function() {
+    $(this).closest('.hotel-item').remove();
+    $(this).closest('.modal').modal('hide');
+    $('.modal-backdrop').remove();
+  });
 
 });
