@@ -1,11 +1,8 @@
 $(document).ready(function() {
 
-  $(".btn-danger").on("click", function() {
-  modal = "#" + $(this).parent().parent().parent().parent().attr('id');
-  $(modal).hide();
-  $('body').removeClass('modal-open');
-  $('.modal-backdrop').remove();
-  $(this).parentsUntil(".ANY").remove();
-    });
+  $(".delete-hotel").on("click", function() {
+    $(this).closest(".hotel-item").remove();
+    $(".modal-backdrop").remove();
+  });
 
 });
