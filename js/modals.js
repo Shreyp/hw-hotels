@@ -1,7 +1,11 @@
 $(document).ready(function() {
 
   $(".btn-danger").on("click", function() {
-    $(this).parent().parent().parent().parent().parent().parent().parent().remove();
+  modal = "#" + $(this).parent().parent().parent().parent().attr('id');
+  $(modal).hide();
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
+  $(this).parentsUntil(".ANY").remove();
     });
 
 });
