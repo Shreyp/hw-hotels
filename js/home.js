@@ -9,10 +9,24 @@ $(document).ready(function() {
 });
 
 
-$(".btn-success").on("click", function() { 
-  window.location.href = "http://stackoverflow.com";
-  console.log(window.location.href)
-});
+  $(".btn-success").click(function() {
+    var hotelLoc = $("#hotelLocation").val();
+    if (hotelLoc === "") {
+      alert("Please Choose a Hotel Location");
+    } else {
+      var chkDate = $("#startDate").val();
+      if (chkDate === "") {
+        alert("Please Choose a Check-in Date");
+      } else {
+        var outDate = $("#endDate").val();
+        if (outDate === "") {
+          alert("Please Choose a Check-out Date");
+        } else {
+          window.location.href = "comparison.html";
+        };
+      };
+    };
+  });
 
 
 $( document.body ).on( 'click', '.dropdown-menu li', function( event ) {
