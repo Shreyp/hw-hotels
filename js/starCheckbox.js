@@ -5,21 +5,12 @@ $(document).ready(function() {
   $('#5starCheckbox').click(function() {
 
     if ($("#5starCheckbox").is(":checked")) {
-      $(pageObject.location).each(function() {
-        if ($(this).hasClass('star5')){
-        $(this).fadeIn('500');
         pageObject.stars[5] = true;
-        }
-      });
+        hotelSort();
 
     } else {
-      $(pageObject.location).each(function() {
-        if ($(this).hasClass('star5')){
-        $(this).fadeOut('500');
         pageObject.stars[5] = false;
-        }
-      });
-
+        hotelSort();
     }
     
 }); 
@@ -27,22 +18,13 @@ $(document).ready(function() {
   $('#4starCheckbox').click(function() {
 
     if ($("#4starCheckbox").is(":checked")) {
-
-      $(pageObject.location).each(function() {
-        if ($(this).hasClass('star4')){
-        $(this).fadeIn('500');
         pageObject.stars[4] = true;
-        }
-      });
+        hotelSort();
+
 
     } else {
-      $(pageObject.location).each(function() {
-        if ($(this).hasClass('star4')){
-        $(this).fadeOut('500');
         pageObject.stars[4] = false;
-        }
-      });
-
+        hotelSort();
     }
     
 }); 
@@ -50,46 +32,27 @@ $(document).ready(function() {
     $('#3starCheckbox').click(function() {
 
     if ($("#3starCheckbox").is(":checked")) {
-
-      $(pageObject.location).each(function() {
-        if ($(this).hasClass('star3')){
-        $(this).fadeIn('500');
         pageObject.stars[3] = true;
-        }
-      });
+        hotelSort();
 
     } else {
-      $(pageObject.location).each(function() {
-        if ($(this).hasClass('star3')){
-        $(this).fadeOut('500');
         pageObject.stars[3] = false;
+        hotelSort();
         }
-      });
-
-    }
     
 }); 
 
       $('#2starCheckbox').click(function() {
 
     if ($("#2starCheckbox").is(":checked")) {
-
-      $(pageObject.location).each(function() {
-        if ($(this).hasClass('star2')){
-        $(this).fadeIn('500');
         pageObject.stars[2] = true;
-        }
-      });
+        hotelSort();
 
     } else {
-      $(pageObject.location).each(function() {
-        if ($(this).hasClass('star2')){
-        $(this).fadeOut('500');
         pageObject.stars[2] = false;
+        hotelSort();
         }
-      });
-
-    }
+     
     
 }); 
 
