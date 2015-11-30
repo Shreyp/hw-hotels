@@ -1,5 +1,8 @@
 function hotelSort () {
   var local = pageObject.location.slice(1);
+  var $zdp = $('#startingDate').data('Zebra_DatePicker');
+
+  
  
 
   $(".hotel-item").each(function(index) {
@@ -44,11 +47,17 @@ function hotelSort () {
 
      else if (pageObject.reviews.Ex === false && $(this).hasClass('Ex')) {
       $(this).fadeOut("1000");
-     }
+     } 
+
+     else if (minPrice > ( $(this).find(".hotel-price").text() ) ) {
+      $(this).fadeOut("1000");
+     } 
+     else if (maxPrice < ( $(this).find(".hotel-price").text() ) ) {
+      $(this).fadeOut("1000");
+     } 
 
      else {
       $(this).fadeIn("1000");
-      console.log(pageObject.reviews.Go)
      }
 
    });
