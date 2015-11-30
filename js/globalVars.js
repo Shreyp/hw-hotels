@@ -10,4 +10,5 @@ var Ex = 5;
 var pageObject = {location: ".ANY", stars: [true,true,true,true,true,true], 
 reviews : {Po: true, Me: true, Ok: true, Go: true, Ex: true } 
 };
-var visibleItems = [];
+
+

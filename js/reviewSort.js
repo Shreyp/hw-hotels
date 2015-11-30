@@ -3,12 +3,12 @@ $(document).ready(function() {
   $('#ExCheckbox').click(function() {
  
     if ($(this).is(":checked")) {
-      pageObject.reviews.Go = true;
-      revShower("Ex");
+      pageObject.reviews.Ex = true;
+      hotelSort();
       
     } else {
       pageObject.reviews.Ex = false;
-      revHider("Ex");
+      hotelSort();
    
 };
     
@@ -17,11 +17,11 @@ $(document).ready(function() {
 
     if ($(this).is(":checked")) {
       pageObject.reviews.Go = true;
-      revShower("Go");
+      hotelSort();
       
     } else {
       pageObject.reviews.Go = false;
-      revHider("Go");
+      hotelSort();
     }
 
     
@@ -30,12 +30,12 @@ $(document).ready(function() {
   $('#OkCheckbox').click(function() {
 
     if ($(this).is(":checked")) {
-      pageObject.reviews.Ex = true;
-      revShower("Ok");
+      pageObject.reviews.Ok = true;
+      hotelSort();
       
     } else {
-      pageObject.reviews.Ex = false;
-      revHider("Ok");
+      pageObject.reviews.Ok = false;
+      hotelSort();
     }
 
     
@@ -43,12 +43,12 @@ $(document).ready(function() {
    $('#MeCheckbox').click(function() {
 
     if ($(this).is(":checked")) {
-      pageObject.reviews.Go = true;
-      revShower("Me");
+      pageObject.reviews.Me = true;
+      hotelSort();
       
     } else {
-      pageObject.reviews.Go = false;
-      revHider("Me");
+      pageObject.reviews.Me = false;
+      hotelSort();
     }
 
     
@@ -56,12 +56,12 @@ $(document).ready(function() {
     $('#PoCheckbox').click(function() {
 
     if ($(this).is(":checked")) {
-      pageObject.reviews.Go = true;
-      revShower("Po");
+      pageObject.reviews.Po = true;
+      hotelSort();
       
     } else {
-      pageObject.reviews.Go = false;
-      revHider("Po");
+      pageObject.reviews.Po = false;
+      hotelSort();
     }
 
     

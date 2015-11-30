@@ -1,278 +1,94 @@
 $(document).ready(function() {
 
-   $(pageObject.location).each(function() {
-    visibleItems.push($(this));
-     });
-
   $("#setLocalNY").click(function(event) {
     event.preventDefault();
     $(".currentLocation").text("New York, NY");
     pageObject.location = ".NY";
+    hotelSort();
+  });
 
-    $(".NY").each(function(index) {
-      if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css('display', 'block');
+  $("#nyOnly").click(function(event) {
+    if ($(this).is(":checked")) {
+    $(".currentLocation").text("New York, NY");
+    pageObject.location = ".NY";
+    hotelSort();
+    } else {
+    $(".currentLocation").text("Any Location");
+    pageObject.location = ".ANY";
+    hotelSort();
     }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
-    });
-
-    $(".DC").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".TX").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".Chi").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-
-    $(".LA").each(function(index) {
-      $(this).css("display", "none");
-    });
-
   });
 
   $("#setLocalWA").click(function(event) {
     event.preventDefault();
+     $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Washington, DC");
     pageObject.location = ".DC";
-
-    $(".DC").each(function(index) {
-       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
-    });
-
-    $(".NY").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".TX").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".Chi").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".LA").each(function(index) {
-      $(this).css("display", "none");
-    });
+    hotelSort();
   });
 
   $("#setLocalTX").click(function(event) {
     event.preventDefault();
+     $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Dallas, Texas");
     pageObject.location = ".TX";
-
-    $(".TX").each(function(index) {
-       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
-    });
-
-    $(".NY").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".DC").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".Chi").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".LA").each(function(index) {
-      $(this).css("display", "none");
-    });
+    hotelSort();
 
   });
 
   $("#setLocalChi").click(function(event) {
     event.preventDefault();
+     $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Chicago, Illinois");
     pageObject.location = ".Chi";
-
-    $(".Chi").each(function(index) {
-       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
-    });
-
-    $(".NY").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".TX").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".DC").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".LA").each(function(index) {
-      $(this).css("display", "none");
-    });
+    hotelSort();
 
   });
 
   $("#setLocalLA").click(function(event) {
     event.preventDefault();
+     $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Los Angeles, CA");
     pageObject.location = ".LA";
-
-    $(".LA").each(function(index) {
-       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
-    });
-
-    $(".NY").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".TX").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".DC").each(function(index) {
-      $(this).css("display", "none");
-    });
-
-    $(".Chi").each(function(index) {
-      $(this).css("display", "none");
-    });
+    hotelSort();
 
   });
   $("#setLocalANY").click(function(event) {
     event.preventDefault();
+    $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Any Location");
     pageObject.location = ".ANY";
-
-    $(".LA").each(function(index) {
-       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
+    hotelSort();
     });
 
-    $(".NY").each(function(index) {
-       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
-    });
+  $("#setDist5").click(function(event) {
+    event.preventDefault();
+    $(".currentDist").text("5 miles")
+  });
 
-    $(".TX").each(function(index) {
-       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
-    });
+  $("#setDist10").click(function(event) {
+    event.preventDefault();
+    $(".currentDist").text("10 miles")
+  });
 
-    $(".DC").each(function(index) {
-       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
-    });
+  $("#setDist15").click(function(event) {
+    event.preventDefault();
+    $(".currentDist").text("15 miles")
+  });
 
-    $(".Chi").each(function(index) {
-       if ($(this).hasClass('star2') && pageObject.stars[star2] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star3') && pageObject.stars[star3] == true){
-      $(this).css("display", "block");
-    }
-     if ($(this).hasClass('star4') && pageObject.stars[star4] == true){
-      $(this).css("display", "block");
-    }
-    if ($(this).hasClass('star5') && pageObject.stars[star5] == true){
-      $(this).css("display", "block");
-    }
-    });
+  $("#setDist20").click(function(event) {
+    event.preventDefault();
+    $(".currentDist").text("20 miles")
+  });
 
+  $("#setDist25").click(function(event) {
+    event.preventDefault();
+    $(".currentDist").text("25 miles")
+  });
+
+  $("#setDist30").click(function(event) {
+    event.preventDefault();
+    $(".currentDist").text("30 miles")
   });
 
 });
