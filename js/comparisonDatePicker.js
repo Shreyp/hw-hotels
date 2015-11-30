@@ -1,12 +1,22 @@
 $(document).ready(function() {
     $("#startingDate").Zebra_DatePicker({
-    format: "m/d/y", direction: 1
+    format: "m/d/y", direction: 1, onSelect: function() {
+      dateChanger();
+
+    }
+
+
   });
     $("#endingDate").Zebra_DatePicker({
-    format: "m/d/y", direction: 1
+    format: "m/d/y", direction: 1, onSelect: function() {
+      dateChanger();
+
+    }
 
   });
     $("startingDate").attr("placeholder",Date());
+ 
+
 });
 
 var today = new Date();
@@ -22,7 +32,7 @@ if(mm<10) {
     mm='0'+mm;
 } 
 
-var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
 
 var mmN = parseInt(mm);
 
@@ -36,3 +46,25 @@ var year = currentDate.getFullYear();
 var monthN = parseInt(month);
 
 $("#checkout").text(( months[monthN-1] + " " + day));
+
+function dateChanger () {
+  if ($("#startingDate").val() !== "") {
+    var startM = $("#startingDate").val().slice(0,2);
+    var startMN = months[parseInt(startM) - 1];
+    var startD = startM = $("#startingDate").val().slice(3,5);
+    var startDN = parseInt(startD);
+    var starting = startMN + " " + startDN;
+     $("#checkin").text(starting);
+  }
+  if ($("#endingDate").val() !== "") {
+    var endM = $("#endingDate").val().slice(0,2);
+    var endMN = months[parseInt(endM) - 1];
+    var endD = endM = $("#endingDate").val().slice(3,5);
+    var endDN = parseInt(endD);
+    var ending = endMN + " " + endDN;
+    $("#checkout").text(ending);
+}
+   
+    
+
+}
