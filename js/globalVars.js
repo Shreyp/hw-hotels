@@ -1,5 +1,5 @@
-var pageObject = {location: ".ANY", stars: [true,true,true,true,true,true], 
-reviews : {Po: true, Me: true, Ok: true, Go: true, Ex: true } 
+var pageObject = {location: ".ANY", stars: [true, true, true, true, true, true],
+reviews: {Po: true, Me: true, Ok: true, Go: true, Ex: true}
 };
 var minPrice = 35;
 var maxPrice = 200;
