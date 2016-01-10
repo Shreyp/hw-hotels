@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-  $("#setLocalNY").click(function(event) {
+  $("#setLocalNY").click(function (event) {
     event.preventDefault();
     $(".currentLocation").text("New York, NY");
     pageObject.location = ".NY";
     hotelSort();
   });
 
-  $("#nyOnly").click(function(event) {
+  $("#nyOnly").click(function (event) {
     if ($(this).is(":checked")) {
     $(".currentLocation").text("New York, NY");
     pageObject.location = ".NY";
@@ -19,7 +19,7 @@ $(document).ready(function() {
     }
   });
 
-  $("#setLocalWA").click(function(event) {
+  $("#setLocalWA").click(function (event) {
     event.preventDefault();
      $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Washington, DC");
@@ -27,7 +27,7 @@ $(document).ready(function() {
     hotelSort();
   });
 
-  $("#setLocalTX").click(function(event) {
+  $("#setLocalTX").click(function (event) {
     event.preventDefault();
      $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Dallas, Texas");
@@ -36,7 +36,7 @@ $(document).ready(function() {
 
   });
 
-  $("#setLocalChi").click(function(event) {
+  $("#setLocalChi").click(function (event) {
     event.preventDefault();
      $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Chicago, Illinois");
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
   });
 
-  $("#setLocalLA").click(function(event) {
+  $("#setLocalLA").click(function (event) {
     event.preventDefault();
      $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Los Angeles, CA");
@@ -53,7 +53,7 @@ $(document).ready(function() {
     hotelSort();
 
   });
-  $("#setLocalANY").click(function(event) {
+  $("#setLocalANY").click(function (event) {
     event.preventDefault();
     $("#nyOnly").prop("checked", false);
     $(".currentLocation").text("Any Location");
@@ -61,34 +61,34 @@ $(document).ready(function() {
     hotelSort();
     });
 
-  $("#setDist5").click(function(event) {
+  $("#setDist5").click(function (event) {
     event.preventDefault();
-    $(".currentDist").text("5 miles")
+    $(".currentDist").text("5 miles");
   });
 
-  $("#setDist10").click(function(event) {
+  $("#setDist10").click(function (event) {
     event.preventDefault();
-    $(".currentDist").text("10 miles")
+    $(".currentDist").text("10 miles");
   });
 
-  $("#setDist15").click(function(event) {
+  $("#setDist15").click(function (event) {
     event.preventDefault();
-    $(".currentDist").text("15 miles")
+    $(".currentDist").text("15 miles");
   });
 
-  $("#setDist20").click(function(event) {
+  $("#setDist20").click(function (event) {
     event.preventDefault();
-    $(".currentDist").text("20 miles")
+    $(".currentDist").text("20 miles");
   });
 
-  $("#setDist25").click(function(event) {
+  $("#setDist25").click(function (event) {
     event.preventDefault();
-    $(".currentDist").text("25 miles")
+    $(".currentDist").text("25 miles");
   });
 
-  $("#setDist30").click(function(event) {
+  $("#setDist30").click(function (event) {
     event.preventDefault();
-    $(".currentDist").text("30 miles")
+    $(".currentDist").text("30 miles");
   });
 
 });
